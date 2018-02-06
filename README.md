@@ -21,6 +21,7 @@
   * Definition Of Test Cases: /features/step_definitions/homepage_steps.rb
  
  #Headless Mode
+ 
    Change Code Inside /features/support/hooks.rb
    
   ``` @browser = Watir::Browser.new(:chrome) ```   

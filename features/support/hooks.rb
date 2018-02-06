@@ -1,6 +1,6 @@
 Before do
   include Common
-  @browser = Watir::Browser.new(:chrome, headless:true)
+  @browser = Watir::Browser.new(:chrome)
 end
 
 After do |scenario|
