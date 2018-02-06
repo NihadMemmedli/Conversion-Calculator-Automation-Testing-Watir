@@ -1,11 +1,11 @@
-# Conversion-Calculator-Automation-Testing-Watir
-# Watir + Cucumber Automation Testing
-# Used Page Object Design Pattern
+# Conversion-Calculator-Automation-Testing
+ * Used Technologies: Watir + Cucumber
+ * Used Design Patterns: Page Object + Singleton
 
 # How to install ? 
-# 1. Install Ruby with Dev Dependicies
-# 2. Install Bundler
-# 3. Command Line: bundle install
+ 1. Install Ruby with Dev Dependencies
+ 2. Install Bundler
+ 3. Command Line: bundle install
 
 # How To Run ?
-# Command Line: bundle exec cucumber
+ Command Line: bundle exec cucumber
