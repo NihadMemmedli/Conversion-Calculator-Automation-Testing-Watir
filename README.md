@@ -19,12 +19,10 @@
   * Test Case: /features/homepage.feature
   * Page Object Class: /features/support/pages/home_page.rb
   * Definition Of Test Cases: /features/step_definitions/homepage_steps.rb
- 
- #Headless Mode
- 
-   Change Code Inside /features/support/hooks.rb
+  * Headless Mode: Change Code Inside /features/support/hooks.rb
    
   ``` @browser = Watir::Browser.new(:chrome) ```   
+  
   to
   
   ``` @browser = Watir::Browser.new(:chrome, headless:true) ``` 
