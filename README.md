@@ -5,7 +5,9 @@
 # How to install ? 
  1. Install Ruby with Dev Dependencies
  2. Install Bundler
- 3. Command Line: bundle install
+ 3. ``` bundle install ```
 
 # How To Run ?
- Command Line: bundle exec cucumber
+```
+ bundle exec cucumber
+```
