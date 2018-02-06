@@ -1,0 +1,18 @@
+urls:
+  conversion_calculator: 'http://www.calculator.net/conversion-calculator.html'
+
+conversion_data:
+  Meter: 1000
+  Celsius: 1
+  Square Meter: 1000000
+  Cubic Meter: 1
+  Kilogram: 1
+  Second: 60
+
+expected_conversion:
+  Kilometer: 1
+  Kelvin: 274.15
+  Square Kilometer: 1
+  Liter: 1000
+  Gram: 1000
+  Minute: 1
