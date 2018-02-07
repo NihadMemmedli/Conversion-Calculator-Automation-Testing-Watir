@@ -3,7 +3,7 @@ Given(/^I am on the conversion calculator home page$/) do
 end
 
 When(/^I click "([^"]*)" on menu$/) do |tab|
-  @current_page.tab_menu_element.li(:text => tab).click
+  @current_page.tab_menu_element.li(:text => tab).wait_until_present.click
 end
 
 Then(/^I check the "([^"]*)" is active$/) do |tab|

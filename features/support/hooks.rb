@@ -1,7 +1,20 @@
 Before do
-  include Common
-  @browser = Watir::Browser.new(:chrome)
+  attempts = 0
+  begin
+    include Common
+    @browser = Watir::Browser.new(:chrome)
+    rescue Net::ReadTimeout
+      if attempts == 0
+        attempts += 1
+        sleep 2
+        retry
+      else
+        raise
+      end
+    end
 end
+
+
 
 After do |scenario|
   begin
