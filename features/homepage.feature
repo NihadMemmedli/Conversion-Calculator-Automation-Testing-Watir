@@ -3,10 +3,11 @@ Feature: Conversion Calculator features test
 
   Scenario Outline: Check Calculator Tabs
     Given I am on the conversion calculator home page
+
     When I click "<tab>" on menu
     Then I check the "<tab>" is active
-    Then I click "<first_unit>" option from "first" calculator
-    And I click "<second_unit>" option from "second" calculator
+    Then I click "<first_unit>" option on "from" table
+    And I click "<second_unit>" option on "to" table
 
     When I set value to first input as "<first_unit>"
     Then I get value from second input as "<second_unit>"

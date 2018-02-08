@@ -1,10 +1,10 @@
 Before do
-  attempts = 0
-  begin
-    include Common
-    @browser = Watir::Browser.new(:chrome)
+  if environment == :prod
+    attempts = 0
+    begin
+      @browser = Watir::Browser.new browser_name
     rescue Net::ReadTimeout
-      if attempts == 0
+      if attempts.zero?
         attempts += 1
         sleep 2
         retry
@@ -12,15 +12,14 @@ Before do
         raise
       end
     end
+  end
 end
-
-
 
 After do |scenario|
   begin
     if scenario.failed?
-      Dir::mkdir('screenshots') unless File.directory?('screenshots')
-      screenshot = "./screenshots/FAILED_#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}.png"
+      Dir.mkdir('screenshots') unless File.directory?('screenshots')
+      screenshot = "./screenshots/FAILED_#{scenario.name.tr(' ','_').tr(/[^0-9A-Za-z_]/, '')}.png"
       @browser.driver.save_screenshot(screenshot)
       embed screenshot, 'image/png'
     end
